@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>js基础 | AnHyun</title>
+    <meta name="description" content="风起于青萍之末，浪成于微澜之间。">
+    <link rel="icon" href="/logo.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.480da52e.css" as="style"><link rel="preload" href="/assets/js/app.3a60bb15.js" as="script"><link rel="preload" href="/assets/js/2.61e0a72b.js" as="script"><link rel="preload" href="/assets/js/15.2e79a9e0.js" as="script"><link rel="prefetch" href="/assets/js/10.0db8074c.js"><link rel="prefetch" href="/assets/js/11.66a7bb07.js"><link rel="prefetch" href="/assets/js/12.e65de938.js"><link rel="prefetch" href="/assets/js/13.e2cc239f.js"><link rel="prefetch" href="/assets/js/14.baf0bfde.js"><link rel="prefetch" href="/assets/js/16.81f60152.js"><link rel="prefetch" href="/assets/js/17.efa30101.js"><link rel="prefetch" href="/assets/js/3.7879d0e3.js"><link rel="prefetch" href="/assets/js/4.e985f9f9.js"><link rel="prefetch" href="/assets/js/5.3cb2ee7a.js"><link rel="prefetch" href="/assets/js/6.af68d8fe.js"><link rel="prefetch" href="/assets/js/7.ee8a5d18.js"><link rel="prefetch" href="/assets/js/8.a782c121.js"><link rel="prefetch" href="/assets/js/9.78fef7c4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.480da52e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">AnHyun</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/basics/" class="nav-link">基础·自检</a></div><div class="nav-item"><a href="/advance/" class="nav-link">进阶·架构</a></div><div class="nav-item"><a href="/interview/" class="nav-link router-link-active">面试·图谱</a></div><div class="nav-item"><a href="https://github.com/AnHyun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/basics/" class="nav-link">基础·自检</a></div><div class="nav-item"><a href="/advance/" class="nav-link">进阶·架构</a></div><div class="nav-item"><a href="/interview/" class="nav-link router-link-active">面试·图谱</a></div><div class="nav-item"><a href="https://github.com/AnHyun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/interview/" class="sidebar-link">文章目录</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML和CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>网络</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>浏览器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>框架篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>编程题</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/interview/编程题/js基础.html" class="active sidebar-link">js基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#一、javascript基础" class="sidebar-link">一、JavaScript基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#手写call函数" class="sidebar-link">手写call函数</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#手写apply函数" class="sidebar-link">手写apply函数</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#手写bind函数" class="sidebar-link">手写bind函数</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#手写new函数" class="sidebar-link">手写new函数</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#手写create函数" class="sidebar-link">手写create函数</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#手写instanceof函数" class="sidebar-link">手写instanceof函数</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#手写isarray函数" class="sidebar-link">手写isArray函数</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#findindex实现" class="sidebar-link">findIndex实现</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#async函数错误统一捕获" class="sidebar-link">async函数错误统一捕获</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#compose函数" class="sidebar-link">compose函数</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#pipeline管道函数" class="sidebar-link">pipeline管道函数</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#节流函数" class="sidebar-link">节流函数</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#防抖函数" class="sidebar-link">防抖函数</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#数组扁平化" class="sidebar-link">数组扁平化</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#数组去重" class="sidebar-link">数组去重</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#promise-实现原理" class="sidebar-link">Promise 实现原理</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#async-函数的实现原理" class="sidebar-link">async 函数的实现原理</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/js基础.html#vue响应式原理简单实现" class="sidebar-link">vue响应式原理简单实现</a></li></ul></li></ul></li><li><a href="/interview/编程题/算法.html" class="sidebar-link">算法</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="一、javascript基础"><a href="#一、javascript基础" aria-hidden="true" class="header-anchor">#</a> 一、JavaScript基础</h2> <blockquote><p>前端工程师吃饭的家伙，深度、广度一样都不能差。</p></blockquote> <h3 id="手写call函数"><a href="#手写call函数" aria-hidden="true" class="header-anchor">#</a> 手写call函数</h3> <div class="language- extra-class"><pre class="language-text"><code>    Function.prototype._call = function(context) {
+      if (typeof this !== 'function') {
+        throw new Error('call must be a function')
+      }
+
+      let args = [...arguments].slice(1);
+
+      const fn = Symbol('fn');
+      context = context || window;
+      context[fn] = this;
+      let result = context[fn](...args);
+      delete context[fn];
+      return result;
+    }
+</code></pre></div><h3 id="手写apply函数"><a href="#手写apply函数" aria-hidden="true" class="header-anchor">#</a> 手写apply函数</h3> <div class="language- extra-class"><pre class="language-text"><code>    Function.prototype._apply = function(context, args) {
+      if (typeof this !== 'function') {
+        throw new Error('call must be a function')
+      }
+
+      const fn = Symbol('fn');
+      context = context || window;
+      context[fn] = this;
+      let result = context[fn](...args);
+      delete context[fn];
+      return result;
+    }
+</code></pre></div><h3 id="手写bind函数"><a href="#手写bind函数" aria-hidden="true" class="header-anchor">#</a> 手写bind函数</h3> <div class="language- extra-class"><pre class="language-text"><code>  	Function.prototype._bind = function(context) {
+      if (typeof this !== 'function') {
+        throw new Error('bind must be on a function')
+      }
+      let _this = this;
+      let args = Array.prototype.slice.call(arguments, 1);
+      let nop = function() {};
+
+      let fn = function() {
+        return _this.apply(this instanceof _this 
+        	? this 
+        	: context, args.concat(Array.prototype.slice.call(arguments)))
+      }
+
+      if (this.prototype) {
+        nop.prototype = this.prototype;
+      }
+      fn.prototype = new nop();
+      return fn;
+    }
+</code></pre></div><h3 id="手写new函数"><a href="#手写new函数" aria-hidden="true" class="header-anchor">#</a> 手写new函数</h3> <div class="language- extra-class"><pre class="language-text"><code>  	function _new(con, ...args) {
+      let obj = Object.create(con.prototype);
+      let result = con.apply(obj, args)
+      return result instanceof Object ? result : obj;
+    }
+</code></pre></div><h3 id="手写create函数"><a href="#手写create函数" aria-hidden="true" class="header-anchor">#</a> 手写create函数</h3> <div class="language- extra-class"><pre class="language-text"><code>  	Object.prototype._create = function(obj) {
+      function f() {};
+      f.prototype = obj;
+      return new f();
+
+    }
+
+    function _instanceof(l, r) {
+    	var o = r.prototype;
+    	l = l.__proto__;
+
+    	while(true) {
+    		if (l === null ) return false;
+    		if (l === o) return true;
+    		l = l.__proto__;
+    	}
+    }
+</code></pre></div><h3 id="手写instanceof函数"><a href="#手写instanceof函数" aria-hidden="true" class="header-anchor">#</a> 手写instanceof函数</h3> <div class="language- extra-class"><pre class="language-text"><code>    function _instanceof(l, r) {
+    	var o = r.prototype;
+    	l = l.__proto__;
+
+    	while(true) {
+    		if (l === null ) return false;
+    		if (l === o) return true;
+    		l = l.__proto__;
+    	}
+    }
+
+</code></pre></div><h3 id="手写isarray函数"><a href="#手写isarray函数" aria-hidden="true" class="header-anchor">#</a> 手写isArray函数</h3> <div class="language- extra-class"><pre class="language-text"><code>	function _isArray(o) {
+    	return Object.prototype.toStirng.call(o) === '[object Array]';
+    }
+</code></pre></div><h3 id="findindex实现"><a href="#findindex实现" aria-hidden="true" class="header-anchor">#</a> findIndex实现</h3> <div class="language- extra-class"><pre class="language-text"><code>Array.prototype.findIndex = function(fn) {
+  for(let i = 0; i &lt; this.length; i++) {
+    if(fn(this[i], i, this)) {
+      return i;
+    }
+  }
+}
+</code></pre></div><h3 id="async函数错误统一捕获"><a href="#async函数错误统一捕获" aria-hidden="true" class="header-anchor">#</a> async函数错误统一捕获</h3> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * async函数错误统一捕获
+ * @param {func}  async函数
+ * @return {Array} 
+ */
+async function errorCaptured(asyncFunc) {
+  try {
+    let res = await asyncFunc()
+    return [null, res]
+  } catch (err) {
+    return [err, null]
+  }
+}
+</code></pre></div><h3 id="compose函数"><a href="#compose函数" aria-hidden="true" class="header-anchor">#</a> compose函数</h3> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * compose函数 函数执行从右到左
+ * @param {any} 
+ * @return {any} 
+ */
+ function compose(...fns) {
+   return function(x) {
+     return fns.reduceRight(function(arg, fn) {
+       return fn(arg)
+     }, x)
+   }
+ }
+</code></pre></div><h3 id="pipeline管道函数"><a href="#pipeline管道函数" aria-hidden="true" class="header-anchor">#</a> pipeline管道函数</h3> <div class="language- extra-class"><pre class="language-text"><code> /**
+ * pipeline管道函数 函数执行从左到右
+ * @param {any} 
+ * @return {any} 
+ */
+ function compose(...fns) {
+   return function(x) {
+     return fns.reduce(function(arg, fn) {
+       return fn(arg)
+     }, x)
+   }
+ }
+</code></pre></div><h3 id="节流函数"><a href="#节流函数" aria-hidden="true" class="header-anchor">#</a> 节流函数</h3> <div class="language- extra-class"><pre class="language-text"><code>	function throttle(fn, wait) {
+    	let canRun = true;
+
+    	return function() {
+            let context = this;
+            let args = arguments;
+
+    		if (!canRun) return;
+            canRun = false;
+
+            setTimeout(function() {
+                fn.apply(context, args)
+                canRun = true;
+            }, wait)
+    	}
+
+    }
+</code></pre></div><h3 id="防抖函数"><a href="#防抖函数" aria-hidden="true" class="header-anchor">#</a> 防抖函数</h3> <div class="language- extra-class"><pre class="language-text"><code>	function debounce(fn, wait, immediate) {
+    	let timeout;
+        
+        return function() {
+            let context = this;
+            let args = arguments;
+
+            timeout &amp;&amp; clearTimeout(timeout);
+
+            if (immediate) {
+                let callNow = !timeout;
+                timeout = setTimeout(function() {
+                    fn.apply(context, args)
+                }, wait) 
+
+                if (callNow) fn.apply(context, args)
+            } else {
+                timeout = setTimeout(function() {
+                    fn.apply(context, args)
+                }, wait) 
+            }
+        }
+    }
+      
+</code></pre></div><h3 id="数组扁平化"><a href="#数组扁平化" aria-hidden="true" class="header-anchor">#</a> 数组扁平化</h3> <div class="language- extra-class"><pre class="language-text"><code>	function _flat(arr) {
+    	if (!Array.isArray(arr)) {
+    		throw new Error('it is not array')
+    	}
+    	return arr.reduce((pre, cur) =&gt; {
+    		return pre.concat(Array.isArray(cur) ? _flat(cur) : cur);
+    	}, [])
+    }
+    function _flat(arr) {
+        if (!Array.isArray(arr)) {
+        throw new Error('it is not array')
+        }
+        while (arr.some(item =&gt; Array.isArray(item))) {
+           arr = [].concat(...arr)
+        }
+        return arr
+    }
+    function _flat(arr) {
+        if (!Array.isArray(arr)) {
+        throw new Error('it is not array')
+        }
+        return arr.join(',').split(',').map(item =&gt; Number(item))
+    }
+      
+</code></pre></div><h3 id="数组去重"><a href="#数组去重" aria-hidden="true" class="header-anchor">#</a> 数组去重</h3> <div class="language- extra-class"><pre class="language-text"><code>	function _unique(arr) {
+        return [...new Set(arr)]
+    }
+    function _unique(arr) {
+        let obj = {}
+        return arr.filter((item, index) =&gt; {
+            return obj.hasOwnProperty(typeof item + item) 
+                ? false 
+                : (obj[typeof item + item] = true)
+        })
+    }
+    function _unique(arr) {
+        return arr.filter((item, index) =&gt; {
+            return arr.indexOf(item) === index;
+        })
+    }
+    function _unique(arr) {
+        let array = [];
+        for (let i = 0; i &lt; arr.length; i++) {
+            if (!Array.inclueds(arr[i])) {
+                array.push(arr[i])
+            }
+        }
+        return array
+    }
+      
+</code></pre></div><h3 id="promise-实现原理"><a href="#promise-实现原理" aria-hidden="true" class="header-anchor">#</a> Promise 实现原理</h3> <div class="language- extra-class"><pre class="language-text"><code>  function _Promise(constructor) {
+    let _this = this;
+    _this.status = 'pending';
+    _this.value = ''
+    _this.reason = ''
+
+    function resolve(value) {
+      if (_this.status === 'pending') {
+        _this.value = value
+        _this.status = 'fulfilled'
+      }
+    }
+
+    function reject(reason) {
+      if (_this.status === 'pending') {
+        _this.reason = reason;
+        _this.status = 'rejected'
+      }
+    }
+
+    try {
+      constructor(resolve, reject)
+    } catch(err) {
+      reject(err)
+    }
+  }
+
+  _Promise.prototype.then = function(onFulfilled, onRejected) {
+    let _this = this;
+
+    if (_this.status === 'fulfilled') {
+      onFulfilled(_this.value);
+    } else if (_this.status === 'rejected') {
+      onRejected(_this.reason)
+    }
+
+  }
+      
+</code></pre></div><h3 id="async-函数的实现原理"><a href="#async-函数的实现原理" aria-hidden="true" class="header-anchor">#</a> async 函数的实现原理</h3> <div class="language- extra-class"><pre class="language-text"><code>	function spawn(genFunc) {
+	  return new Promise(function(resolve, reject) {
+	    const gen = genFunc();
+
+	    function step(nextFunc) {
+	      let next;
+	      try {
+	        next = nextFunc()
+	      } catch(e) {
+	        return reject(e)
+	      }
+
+	      if(next.done) {
+	        return resolve(next.value);
+	      }
+
+	      Promise.resolve(next.value).then(
+	        function(v) {
+	          step(function() {
+	            return gen.next(v)
+	          })
+	        },
+
+	        function(e) {
+	          setp(function() {
+	            return gen.throw(e)
+	          })
+	        }
+	      )
+	    }
+
+	    step(function() {
+	      return gen.next(undefined)
+	    })
+	  })
+	}
+</code></pre></div><h3 id="vue响应式原理简单实现"><a href="#vue响应式原理简单实现" aria-hidden="true" class="header-anchor">#</a> vue响应式原理简单实现</h3> <div class="language- extra-class"><pre class="language-text"><code>	/**
+   * vue响应式原理
+   * 基于Object.defineProperty
+   */
+
+  let data = {price: 5, quantity: 2}
+  let target = null
+  class Dep {
+    constructor() {
+      this.subscribers = [];
+    }
+    depend() {
+      if(target &amp;&amp; !this.subscribers.includes(target)) {
+        this.subscribers.push(target);
+        console.log('depend', this.subscribers)
+      }
+    }
+    notify() {
+      this.subscribers.forEach(sub =&gt; sub())
+      console.log('notify', this.subscribers)
+    }
+  }
+ 
+
+  Object.keys(data).forEach(key =&gt; {
+    let internalVale = data[key]
+
+    const dep = new Dep()
+    console.log('dep', dep)
+
+    Object.defineProperty(data, key, {
+      get() {
+        console.log(`get value ${internalVale}`)
+        dep.depend()
+        return internalVale
+      },
+      set(newVal) {
+        console.log(`set value ${newVal}`)
+        internalVale = newVal;
+        dep.notify()
+      }
+    })
+  })
+
+  function watcher(fn) {
+    target = fn;
+    target();
+    target = null
+    console.log('watcher')
+  }
+
+  watcher( _ =&gt; {
+    data.total = data.price * data.quantity
+    console.log(data.total)
+  })
+
+
+  /**
+   * vue响应式原理
+   * 基于Proxy
+   */
+
+  let data = { price:5, quantity: 2 };
+  let target = null;
+
+  class Dep {
+    constructor () {
+      this.subscribers = [];
+    }
+    depend () {
+      if (target &amp;&amp; !this.subscribers.includes(target)) {
+        this.subscribers.push(target);
+        console.log('depend', this.subscribers)
+      }
+    }
+    notify() {
+      this.subscribers.forEach(sub =&gt; sub())
+      console.log('notify', this.subscribers)
+    }
+  }
+
+  let deps = new Map();
+  Object.keys(data).forEach(key =&gt; {
+    deps.set(key, new Dep());
+  })
+  console.log(deps)
+
+  let data_without_proxy = data;
+  data = new Proxy(data_without_proxy, {
+    get(obj, key) {
+      deps.get(key).depend();
+      return obj[key];
+    },
+    set(obj, key, newVal) {
+      obj[key] = newVal;
+      deps.get(key).notify()
+      return true;
+    }
+  })
+
+  function watcher(func) {
+    target = func;
+    target();
+    target = null;
+  }
+  let total = 0;
+  watcher(() =&gt; {
+    total = data.price * data.quantity;
+  })
+      
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/interview/" class="prev router-link-active">文章目录</a></span> <span class="next"><a href="/interview/编程题/算法.html">算法</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3a60bb15.js" defer></script><script src="/assets/js/2.61e0a72b.js" defer></script><script src="/assets/js/15.2e79a9e0.js" defer></script>
+  </body>
+</html>

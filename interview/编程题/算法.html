@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>算法 | AnHyun</title>
+    <meta name="description" content="风起于青萍之末，浪成于微澜之间。">
+    <link rel="icon" href="/logo.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.480da52e.css" as="style"><link rel="preload" href="/assets/js/app.3a60bb15.js" as="script"><link rel="preload" href="/assets/js/2.61e0a72b.js" as="script"><link rel="preload" href="/assets/js/16.81f60152.js" as="script"><link rel="prefetch" href="/assets/js/10.0db8074c.js"><link rel="prefetch" href="/assets/js/11.66a7bb07.js"><link rel="prefetch" href="/assets/js/12.e65de938.js"><link rel="prefetch" href="/assets/js/13.e2cc239f.js"><link rel="prefetch" href="/assets/js/14.baf0bfde.js"><link rel="prefetch" href="/assets/js/15.2e79a9e0.js"><link rel="prefetch" href="/assets/js/17.efa30101.js"><link rel="prefetch" href="/assets/js/3.7879d0e3.js"><link rel="prefetch" href="/assets/js/4.e985f9f9.js"><link rel="prefetch" href="/assets/js/5.3cb2ee7a.js"><link rel="prefetch" href="/assets/js/6.af68d8fe.js"><link rel="prefetch" href="/assets/js/7.ee8a5d18.js"><link rel="prefetch" href="/assets/js/8.a782c121.js"><link rel="prefetch" href="/assets/js/9.78fef7c4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.480da52e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">AnHyun</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/basics/" class="nav-link">基础·自检</a></div><div class="nav-item"><a href="/advance/" class="nav-link">进阶·架构</a></div><div class="nav-item"><a href="/interview/" class="nav-link router-link-active">面试·图谱</a></div><div class="nav-item"><a href="https://github.com/AnHyun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/basics/" class="nav-link">基础·自检</a></div><div class="nav-item"><a href="/advance/" class="nav-link">进阶·架构</a></div><div class="nav-item"><a href="/interview/" class="nav-link router-link-active">面试·图谱</a></div><div class="nav-item"><a href="https://github.com/AnHyun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/interview/" class="sidebar-link">文章目录</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML和CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>网络</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>浏览器</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>框架篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>编程题</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/interview/编程题/js基础.html" class="sidebar-link">js基础</a></li><li><a href="/interview/编程题/算法.html" class="active sidebar-link">算法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/interview/编程题/算法.html#一、算法" class="sidebar-link">一、算法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/interview/编程题/算法.html#排序" class="sidebar-link">排序</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/算法.html#二分法查找" class="sidebar-link">二分法查找</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/算法.html#数组交集" class="sidebar-link">数组交集</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/算法.html#深度优先算法" class="sidebar-link">深度优先算法</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/算法.html#广度优先算法" class="sidebar-link">广度优先算法</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/算法.html#深拷贝" class="sidebar-link">深拷贝</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/算法.html#多条件查询函数" class="sidebar-link">多条件查询函数</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/算法.html#商品筛选器" class="sidebar-link">商品筛选器</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/算法.html#数组对象按属性分类" class="sidebar-link">数组对象按属性分类</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/算法.html#判断回文字符串" class="sidebar-link">判断回文字符串</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/算法.html#有效的括号" class="sidebar-link">有效的括号</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/算法.html#删除字符串中的所有相邻重复项" class="sidebar-link">删除字符串中的所有相邻重复项</a></li><li class="sidebar-sub-header"><a href="/interview/编程题/算法.html#自定义定时器" class="sidebar-link">自定义定时器</a></li></ul></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="一、算法"><a href="#一、算法" aria-hidden="true" class="header-anchor">#</a> 一、算法</h2> <blockquote><p>前端工程师吃饭的家伙，深度、广度一样都不能差。</p></blockquote> <h3 id="排序"><a href="#排序" aria-hidden="true" class="header-anchor">#</a> 排序</h3> <div class="language- extra-class"><pre class="language-text"><code>  	// 插入排序
+    function insertSort(array) {
+      for (let i = 1; i &lt; array.length; i++) {
+        let target = i;
+        for(let j = i - 1; j &gt;= 0; j--) {
+          if(array[target] &lt; array[j]) {
+            [array[target], array[j]] = [array[j], array[target]];
+            target = j;
+          } else {
+            break;
+          }
+        }
+      }
+    }
+
+    // 选择排序
+    function selectionSort(array) {
+    	for (let i = 0; i &lt; array.length; i++) {
+    		let minIndex = i;
+    		for (let j = i + 1; j &lt; array.length; j++) {
+    			if (array[j] &lt; array[minIndex]) {
+    				minIndex = j;
+    			}
+    		}
+
+    		[array[j], array[minIndex]] = [array[minIndex], array[j]];
+    	}
+    }
+
+    // 归并排序
+    function mergeSort(array) {
+    	const len = array.length;
+    	if (len &lt; 2) {
+    		return array;
+    	}
+
+    	const mid = Math.floor(len / 2);
+    	const first = array.slice(0, mid);
+    	const last = array.slice(mid);
+
+    	return merge(mergeSort(first), mergeSort(last));
+    }
+    function merge(left, right) {
+    	let result = [];
+    	while(left.length &amp;&amp; right.length) {
+    		if (left[0] &lt;= right[0]) {
+    			result.push(left.shift());
+    		} else {
+    			result.push(right.shift());
+    		}
+    	}
+    	while(left.length) {
+    		result.push(left.shift());
+    	}
+    	while(right.length) {
+    		result.push(right.shift());
+    	}
+
+    	return result;
+    } 
+
+    // 快速排序
+    function quickSort(array) {
+    	if (array.length &lt; 2) {
+    		return array;
+    	}
+    	let target = array[0];
+    	let left = [];
+    	let right = [];
+
+    	for (let i = 1; i &lt; array.length; i++) {
+    		if (array[i] &lt; target) {
+    			left.push(array[i]);
+    		} else {
+    			right.push(array[i])
+    		}
+    	}
+    	return quickSort(left).concat([target], quickSort(right));
+
+    }
+
+
+    // 冒泡排序
+    function bubbleSort(array) {
+    	for (let i = 0; i &lt; array.length; i++) {
+    		let complete = true;
+    		for(let j = 0; j &lt; array.length - 1 - i; j++) {
+    			// 比较相邻数
+    			if (array[j] &gt; array[j + 1]) {
+    				[array[j], array[j + 1]] = [array[j + 1], array[j]];
+    				complete = false;
+    			}
+    		}
+
+    		if (complete) {
+    			break;
+    		}
+    	}
+    	return array;
+    }
+    // 冒泡优化版
+    function bubbleSort(array) {
+        let i = array.length - 1;
+        while(i &gt; 0) {
+            let pos = 0;
+
+            for (let j = 0; j &lt; i; j++) {
+                if (array[j] &gt; array[j + 1]) {
+                    pos = j
+                    [array[j], array[j + 1]] = [array[j + 1], array[j]];
+                }
+            }
+            i = pos
+        }
+        return array
+    }
+</code></pre></div><h3 id="二分法查找"><a href="#二分法查找" aria-hidden="true" class="header-anchor">#</a> 二分法查找</h3> <div class="language- extra-class"><pre class="language-text"><code>  	function binarySearch(target, array) {
+    	let max = array.length - 1;
+    	let min = 0;
+
+    	while (min &gt;= max) {
+    		let mid = Math.floor((max + min) / 2);
+    		if (target &gt; array[mid]) {
+    			min = mid + 1;
+    		}  else if (target &lt; array[mid]) {
+    			max = mid - 1;
+    		} else {
+    			return mid;
+    		}
+    	}
+    	return -1;
+
+    }
+</code></pre></div><h3 id="数组交集"><a href="#数组交集" aria-hidden="true" class="header-anchor">#</a> 数组交集</h3> <div class="language- extra-class"><pre class="language-text"><code>  	function intersect(m, n) {
+      let hash = {};
+      let arr = [];
+      for (let i = 0; i &lt; m.length; i++) {
+        let v = m[i];
+        hash[v] ? hash[v] += 1 : hash[v] = 1
+      }
+
+      for (let i = 0; i &lt; n.length; i++) {
+        let v = n[i]
+        if (hash[v] &amp;&amp; hash[v] &gt; 0) {
+          arr.push(v)
+          hash[v] -= 1
+        } 
+        
+      }
+      return arr
+    }
+</code></pre></div><h3 id="深度优先算法"><a href="#深度优先算法" aria-hidden="true" class="header-anchor">#</a> 深度优先算法</h3> <div class="language- extra-class"><pre class="language-text"><code> /**
+ * 递归方法
+ * @param {Object} node 节点
+ * @param {Array} nodeList 节点结合
+ */
+ function deepTree(node, nodeList=[]) {
+  if (node) {
+    nodeList.push(node)
+    let children = node.children;
+    for (let i = 0; i &lt; children.length; i++) {
+      deepTree(children[i], nodeList)
+    }
+  }
+  return nodeList;
+ }
+
+ /**
+ * 栈方法
+ * @param {Object} node 节点
+ * @param {Array} nodeList 节点结合
+ */
+ function deepTree2(node) {
+  let nodes = [];
+  let stack = [];
+  if (node) {
+    stack.push(node);
+
+    while(stack.length) {
+      let item = stack.pop();
+      let children = item.children;
+      nodes.push(item);
+
+      for (let i = children.length - 1; i &gt;= 0; i--) {
+        stack.push(children[i])
+      }
+    }
+  }
+  return nodes;
+ }
+</code></pre></div><h3 id="广度优先算法"><a href="#广度优先算法" aria-hidden="true" class="header-anchor">#</a> 广度优先算法</h3> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 广度优先算法 队列方法
+ * @param {Object} node 节点
+ * @param {Array} nodeList 节点结合
+ */
+ function widthTree(node) {
+  let nodes = [];
+  let stack = [];
+  if (node) {
+    stack.push(node);
+    while(stack.length) {
+      let item = stack.shift();
+      let children = item.children;
+      nodes.push(item)
+
+      for (let i = 0; i &lt; children.length; i++) {
+        stack.push(children[i])
+      }
+    }
+  }
+  return nodes;
+ }
+</code></pre></div><h3 id="深拷贝"><a href="#深拷贝" aria-hidden="true" class="header-anchor">#</a> 深拷贝</h3> <div class="language- extra-class"><pre class="language-text"><code> /**
+ * 深拷贝 广度优先算法
+ * @param {Array | Object} 
+ * @return {Array | Object} 
+ */
+ function getEmpty(o) {
+   if(Object.prototype.toString.call(orogin) === '[Object Array]') {
+     return [];
+   }
+   if(Object.prototype.toString.call(orogin) === '[Object Object]') {
+     return {};
+   }
+   return o;
+ }
+  function deepCopyBFS(origin) {
+    let stack = [];
+    let map = new Map();
+
+    let target = getEmpty(origin);
+    if (target != origin) {
+      stack.push([origin, target])
+      map.set(origin, target);
+    }
+
+    while(stack.length) {
+      let [ori, tar] = stack.shift();
+      for (let key in ori) {
+
+        // 处理循环引用
+        if (map.get(ori[key])) {
+          tar[key] = map.get(ori[key]);
+          continue;
+       }
+
+       tar[key] = getEmpty(ori[key]);
+       if (ori[key] != tar[key]) {
+         stack.push([ori[key], tar[key]])
+         map.set([ori[key], tar[key]]);
+       }
+      }
+    }
+    
+    return target;
+  }
+
+  /**
+   * 深拷贝 深度优先算法
+   * @param {Array | Object} 
+   * @return {Array | Object} 
+   */
+  function deepCopyDFS(origin) {
+   let stack = [];
+   let map = new Map();
+
+   let target = getEmpty(origin);
+   if (target != origin) {
+     stack.push([origin, target])
+     map.set(origin, target);
+   }
+
+   while(stack.length) {
+     let [ori, tar] = stack.pop();
+     for (let key in ori) {
+
+        // 处理循环引用
+        if (map.get(ori[key])) {
+          tar[key] = map.get(ori[key]);
+          continue;
+       }
+
+       tar[key] = getEmpty(ori[key]);
+       if (ori[key] != tar[key]) {
+         stack.push([ori[key], tar[key]])
+         map.set([ori[key], tar[key]]);
+       }
+     }
+
+   }
+   return target;
+ }
+</code></pre></div><h3 id="多条件查询函数"><a href="#多条件查询函数" aria-hidden="true" class="header-anchor">#</a> 多条件查询函数</h3> <div class="language- extra-class"><pre class="language-text"><code>/**
+* 多条件查询函数
+* @param {Object} [condition] 条件
+* @param {Array} [source] 源数据
+*/
+function doFilter(source, condition) {
+  let searchForm = {};
+  for (let key in condition) {
+    if (condition.hasOwnProperty(key)) {
+      if (condition[key] !== '') {
+        searchForm[key] = condition[key]
+      }
+    }
+  }
+  if (JSON.stringify(searchForm) === '{}') return source;
+
+  return source.filter( item =&gt; {
+    return Object.keys( searchForm ).every( key =&gt; {
+      // 判断汉字正则
+      let isMatch = /^[\u4e00-\u9fa5]+$/.test(searchForm[ key ])
+        ? String( item[ key ] ).toLowerCase().indexOf(String( searchForm[ key ] ).trim().toLowerCase() ) !== -1
+        : String( item[ key ] ).toLowerCase() == String( searchForm[ key ] ).trim().toLowerCase()
+      return isMatch
+    })
+  })
+}
+</code></pre></div><h3 id="商品筛选器"><a href="#商品筛选器" aria-hidden="true" class="header-anchor">#</a> 商品筛选器</h3> <div class="language- extra-class"><pre class="language-text"><code>const ProductFilters = {
+ /**
+   * @param {array&lt;Product&gt;} products
+   * @param {array&lt;{type: String, low: number, high: number}&gt;} ranges
+   */
+  rangesFilter: function (products, ranges) {
+      if (ranges.length === 0) {
+          return products;
+      } else {
+          /**
+           * 循环多个区间条件，
+           * 每种区间类型应该只有一个，
+           * 比如价格区间不会有1000-2000和4000-6000同时需要的情况
+           */
+          for (let range of ranges) {
+              // 多个不同类型区间是与逻辑，可以直接赋值给自身
+              products = products.filter(function (item) {
+                  return item[range.type] &gt;= range.low &amp;&amp; item[range.type] &lt;= range.high;
+              });
+          }
+          return products;
+      }
+  },
+
+  /**
+   * @param {array&lt;Product&gt;} products
+   * @param {array&lt;{type: String, value: String}&gt;} chooses
+   */
+  choosesFilter: function (products, chooses) {
+      let tmpProducts = [];
+      if (chooses.length === 0) {
+          tmpProducts = products;
+      } else {
+          /**
+           * 选择类型条件是或逻辑，使用数组连接concat
+           */
+          for (let choice of chooses) {
+              tmpProducts = tmpProducts.concat(products.filter(function (item) {
+                  return item[choice.type].indexOf(choice.value) !== -1;
+              }));
+          }
+      }
+      return tmpProducts;
+  }
+}
+</code></pre></div><h3 id="数组对象按属性分类"><a href="#数组对象按属性分类" aria-hidden="true" class="header-anchor">#</a> 数组对象按属性分类</h3> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * groupBy 数组对象按属性分类
+ * @param {function} fn
+ */
+function groupBy(array, f) {
+  var groups = {};
+  array.forEach(function (o) {
+      var group = JSON.stringify(f(o));
+      groups[group] = groups[group] || [];
+      groups[group].push(o);
+  });
+  return Object.keys(groups).map(function (group) {
+      return groups[group];
+  });
+}
+</code></pre></div><h3 id="判断回文字符串"><a href="#判断回文字符串" aria-hidden="true" class="header-anchor">#</a> 判断回文字符串</h3> <div class="language- extra-class"><pre class="language-text"><code>1. 解法一：使用API
+function isPlalindrome(input) {
+  if (typeof input !== 'string') return false;
+  return input.split('').reverse().join('') === input;
+}
+
+2. 解法二：不使用API
+function isPlalindrome(input) {
+  if (typeof input !== 'string') return false;
+  let i = 0, j = input.length - 1
+  while(i &lt; j) {
+      if(input.charAt(i) !== input.charAt(j)) return false
+      i ++
+      j --
+  }
+  return true
+}
+</code></pre></div><h3 id="有效的括号"><a href="#有效的括号" aria-hidden="true" class="header-anchor">#</a> 有效的括号</h3> <div class="language- extra-class"><pre class="language-text"><code>var isValid = function(s) {
+    let map = {
+        '{': '}',
+        '(': ')',
+        '[': ']'
+    }
+    let stack = []
+    for(let i = 0; i &lt; s.length ; i++) {
+        if(map[s[i]]) {
+            stack.push(s[i])
+        } else if(s[i] !== map[stack.pop()]){
+            return false
+        }
+    }
+    return stack.length === 0
+};
+</code></pre></div><h3 id="删除字符串中的所有相邻重复项"><a href="#删除字符串中的所有相邻重复项" aria-hidden="true" class="header-anchor">#</a> 删除字符串中的所有相邻重复项</h3> <div class="language- extra-class"><pre class="language-text"><code>var removeDuplicates = function(S) {
+    let stack = []
+    for(c of S) {
+        let prev = stack.pop()
+        if(prev !== c) {
+            stack.push(prev)
+            stack.push(c)
+        }
+    }
+    return stack.join('')
+};
+</code></pre></div><h3 id="自定义定时器"><a href="#自定义定时器" aria-hidden="true" class="header-anchor">#</a> 自定义定时器</h3> <div class="language- extra-class"><pre class="language-text"><code>/**
+* @description 写一个 mySetInterVal(fn, a, b),每次间隔 a,a+b,a+2b 的时间，然后写一个 myClear，停止上面的 mySetInterVal 
+* @param {Function} [fn] 条件
+* @param {Number} [a] 时间
+* @param {Number} [b] 时间2
+*/
+function mySetInterval (fn, a, b) {
+  let _interval = [a, a + b, a + 2 * b];
+  let _currInterval = null;
+  let _index = 0;
+
+  const _mySetInterval = function(time) {
+    if (_index &lt; _interval.length) {
+       clearInterval(_currInterval)
+      _currInterval = setInterval(() =&gt; {
+        fn()
+        _index++;
+        _mySetInterval(_interval[_index])
+      }, time);
+      return _currInterval
+    } else {
+      _index = 0;
+      _mySetInterval(_interval[_index])
+    }
+  }
+
+  _mySetInterval(_interval[_index]) 
+  return _currInterval
+}
+
+function myClear(_interval) {
+  clearInterval(_interval)
+}
+
+
+function mySetInterval (fn, a, b) {
+  this.a = a;
+  this.b = b;
+  this.time = 0;
+  this.handle = null;
+
+  this.start = () =&gt; {
+    this.handle = setTimeout(() =&gt; {
+      fn();
+      this.time++;
+      this.start()
+    }, this.a + this.time * this.b)
+  }
+
+  this.stop = () =&gt; {
+    clearTimeout(this.handle)
+    this.time = 0;
+  }
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/interview/编程题/js基础.html" class="prev">js基础</a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3a60bb15.js" defer></script><script src="/assets/js/2.61e0a72b.js" defer></script><script src="/assets/js/16.81f60152.js" defer></script>
+  </body>
+</html>
